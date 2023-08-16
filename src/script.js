@@ -40,6 +40,9 @@ scene.add(line)
 // const turbines= new Turbines(scene, mountain)
 const mountains = new Mountains(scene)
 
+const turbines= new Turbines(scene)
+//loadTurbine(mixer, windTurbine, scene)
+//loadTurbine(mixer, windTurbine, scene, mountain)
 /**
  * Mountain
  */
