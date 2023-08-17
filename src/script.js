@@ -28,7 +28,7 @@ const testMaterial= new THREE.MeshBasicMaterial({color: 0xffffff, side: THREE.Do
 const testPlane = new THREE.Mesh( testPlaneGeo,testMaterial );
 testPlane.rotateX(-Math.PI / 2)
 testPlane.position.y = 0
-scene.add( testPlane )
+// scene.add( testPlane )
 
 const line = new THREE.Line(boundaryGeometry, new THREE.LineBasicMaterial({color: 0xffff00}))
 line.position.y = 10
@@ -40,7 +40,7 @@ scene.add(line)
 // const turbines= new Turbines(scene, mountain)
 const mountains = new Mountains(scene)
 
-const turbines= new Turbines(scene)
+// const turbines= new Turbines(scene)
 //loadTurbine(mixer, windTurbine, scene)
 //loadTurbine(mixer, windTurbine, scene, mountain)
 /**

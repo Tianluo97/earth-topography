@@ -3,6 +3,8 @@ import { Mesh, Object3D} from 'three'
 import { PlaneGeometry
  } from 'three'
 import {geometryWidth, geometryHeight} from '../utilities/constants'
+import { GUI } from 'dat.gui'
+import {mergedMaterial} from './topographyMaterial'
 
 export class Mountain extends Mesh {
     constructor(data) {
@@ -20,9 +22,10 @@ export class Mountain extends Mesh {
             this.geometry.attributes.position.setZ(index, (data[index]/120));
         });
         this.geometry.computeVertexNormals();
+
+        //this.material = new THREE.MeshLambertMaterial({color: 0xffffff, side: THREE.DoubleSide});
+        this.material = mergedMaterial
         
-        this.material = new THREE.MeshLambertMaterial({side: THREE.DoubleSide});
-    
         this.rotation.x = -Math.PI / 2;
 
         this.castShadow = true
